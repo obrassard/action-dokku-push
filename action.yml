@@ -1,5 +1,5 @@
 # action.yml
-name: 'Deploy to Dokku'
+name: 'Push to Dokku'
 description: 'Easily deploy an app to your Dokku Instance'
 author: 'Olivier Brassard'
 branding:
