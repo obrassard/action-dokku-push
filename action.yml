@@ -1,0 +1,20 @@
+# action.yml
+name: 'Deploy to Dokku'
+description: 'Easily deploy an app to your Dokku Instance'
+author: 'Olivier Brassard'
+branding:
+  icon: 'send'  
+  color: 'purple'
+inputs:
+  dokku_repo: 
+    description: "The dokku app's git repository url (in SSH format)"
+    required: true
+  ssh_key: 
+    description: 'A private SSH key that has push acces to your Dokku instance'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    SSH_PRIVATE_KEY : ${{ inputs.ssh_key }}
+    DOKKU_REPO : ${{ inputs.dokku_repo }}
