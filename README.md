@@ -24,7 +24,7 @@ SvhOFcCPizxFeuuJGYQhNlxVBWPj1Jl6ni6rBoHmbBhZCPCnhmenlBPVJcnUczyy
 zrrvVLniH+UTjreQkhbFVqLPnL44+LIo30/oQJPISLxMYmZnuwudPN6O6ubyb8MK
 -----END OPENSSH PRIVATE KEY-----
 
-``` 
+```
 
 > :bulb: Tip : It is recommanded to use **GitHub Actions Secrets** to store sensible informations like SSH Keys
 
