@@ -5,13 +5,15 @@ Easily deploy an app to your Dokku Instance from GitHub
 
 #### `dokku_repo`
 
-**Required** The dokku app's git repository url **(in SSH format)**. 
+**Required**. The dokku app's git repository url **(in SSH format)**. 
 
 Example : `ssh://dokku@dokku.myhost.ca:22/appname`
 
+***
+
 #### `ssh_key`
 
-**Required** An private ssh key that has push acces to your Dokku instance. 
+**Required**. An private ssh key that has push acces to your Dokku instance. 
 
 Example :
 
