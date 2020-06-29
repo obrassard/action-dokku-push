@@ -54,7 +54,7 @@ jobs:
     - run: git fetch --prune --unshallow 
   
     - name: Push to dokku
-      uses: obrassard/action-dokku-deploy@v1.0.0
+      uses: obrassard/action-dokku-deploy@v1.0.1
       with:
        dokku_repo: 'ssh://dokku@dokku.myhost.ca:22/appname'
        ssh_key: ${{ secrets.SSH_KEY }}
