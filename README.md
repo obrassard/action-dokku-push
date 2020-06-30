@@ -30,6 +30,14 @@ zrrvVLniH+UTjreQkhbFVqLPnL44+LIo30/oQJPISLxMYmZnuwudPN6O6ubyb8MK
 
 > :bulb: Tip : It is recommanded to use **GitHub Actions Secrets** to store sensible informations like SSH Keys
 
+***
+
+#### `deploy_branch`
+
+Optional. The branch to be deployed when pushing to Dokku (default to `master`). Useful when a [custom deploy branch](http://dokku.viewdocs.io/dokku/deployment/methods/git/#changing-the-deploy-branch) is set on Dokku.
+
+Example : `develop`
+
 ## Example usage 
 
 This action is particularly useful when triggered by new pushes :
@@ -58,5 +66,6 @@ jobs:
       with:
        dokku_repo: 'ssh://dokku@dokku.myhost.ca:22/appname'
        ssh_key: ${{ secrets.SSH_KEY }}
+       deploy_branch: 'develop'
 ```
 
