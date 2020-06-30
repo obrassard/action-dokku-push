@@ -12,9 +12,14 @@ inputs:
   ssh_key: 
     description: 'A private SSH key that has push acces to your Dokku instance'
     required: true
+  deploy_branch:
+    description: 'The branch to be deployed when pushing to Dokku (default: master)'
+    required: false
+    default: "master"
 runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
     SSH_PRIVATE_KEY : ${{ inputs.ssh_key }}
     DOKKU_REPO : ${{ inputs.dokku_repo }}
+    DEPLOY_BRANCH : ${{ inputs.deploy_branch }}
