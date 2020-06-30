@@ -13,7 +13,7 @@ ssh-add /root/.ssh/id_rsa
 echo ""
 echo "Pushing to Dokku Host";
 
-git push $DOKKU_REPO HEAD:refs/heads/master --force
+git push $DOKKU_REPO $GITHUB_SHA:refs/heads/$DEPLOY_BRANCH --force
 
 [ $? -eq 0 ]  || exit 1
 
