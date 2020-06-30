@@ -49,10 +49,9 @@ jobs:
     
     - name: Cloning repo # This step is required
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # This is required or you might get an error from Dokku
 
-    # This step is required or you might get an error from Dokku
-    - run: git fetch --prune --unshallow 
-  
     - name: Push to dokku
       uses: obrassard/action-dokku-deploy@v1.0.1
       with:
