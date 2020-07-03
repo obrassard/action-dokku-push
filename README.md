@@ -1,6 +1,10 @@
 # action-dokku-deploy
 Easily deploy an app to your Dokku Instance from GitHub
 
+### Requirements
+
+Please note that this action is compatible with `dokku >= 0.11.6`.
+
 ## Inputs
 
 #### `dokku_repo`
@@ -54,6 +58,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+  
+    - name: Cancel Previous Runs # Optional step 
+      uses: styfle/cancel-workflow-action@0.4.0
+      with:
+        access_token: ${{ github.token }}
     
     - name: Cloning repo # This step is required
       uses: actions/checkout@v2
@@ -61,10 +70,10 @@ jobs:
         fetch-depth: 0 # This is required or you might get an error from Dokku
 
     - name: Push to dokku
-      uses: obrassard/action-dokku-deploy@v1.0.2
+      uses: obrassard/action-dokku-deploy@v1.0.3
       with:
-       dokku_repo: 'ssh://dokku@dokku.myhost.ca:22/appname'
-       ssh_key: ${{ secrets.SSH_KEY }}
-       deploy_branch: 'develop'
+        dokku_repo: 'ssh://dokku@dokku.myhost.ca:22/appname'
+        ssh_key: ${{ secrets.SSH_KEY }}
+        deploy_branch: 'develop'
 ```
 

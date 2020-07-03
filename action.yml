@@ -19,6 +19,9 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  entrypoint: '/app/entrypoint.sh'
+  post-entrypoint: '/app/dokku-unlock.sh'
+  post-if: cancelled()
   env:
     SSH_PRIVATE_KEY : ${{ inputs.ssh_key }}
     DOKKU_REPO : ${{ inputs.dokku_repo }}
