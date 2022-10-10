@@ -70,7 +70,7 @@ jobs:
         fetch-depth: 0 # This is required or you might get an error from Dokku
 
     - name: Push to dokku
-      uses: obrassard/action-dokku-deploy@v1.0.3
+      uses: obrassard/action-dokku-deploy@v1.0.2
       with:
         dokku_repo: 'ssh://dokku@dokku.myhost.ca:22/appname'
         ssh_key: ${{ secrets.SSH_KEY }}
