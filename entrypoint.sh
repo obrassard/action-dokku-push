@@ -2,6 +2,7 @@
 
 script_dir=$(dirname $0)
 
+. "$script_dir/cloudflared.sh"
 . "$script_dir/setup-ssh.sh"
 
 echo ""

@@ -2,7 +2,6 @@
 
 echo "Setuping SSH Key"
 
-mkdir -p /root/.ssh
 echo "$SSH_PRIVATE_KEY" | tr -d '\r' > /root/.ssh/id_rsa
 chmod 600 /root/.ssh/id_rsa
 ssh_host=$(echo $DOKKU_REPO | sed -e 's/.*@//' -e 's/[:/].*//')

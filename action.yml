@@ -16,6 +16,12 @@ inputs:
     description: 'The branch to be deployed when pushing to Dokku (default: master)'
     required: false
     default: "master"
+  cloudflared_client_id:
+    description: 'The CLIENT ID of a service token created in Cloudflare Zero Trust'
+    required: true
+  cloudflared_client_secret:
+    description: 'The CLIENT SECRET of a service token created in Cloudflare Zero Trust'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -26,3 +32,5 @@ runs:
     SSH_PRIVATE_KEY : ${{ inputs.ssh_key }}
     DOKKU_REPO : ${{ inputs.dokku_repo }}
     DEPLOY_BRANCH : ${{ inputs.deploy_branch }}
+    CLOUDFLARE_CLIENT_ID : ${{ inputs.cloudflared_client_id }}
+    CLOUDFLARE_CLIENT_SECRET : ${{ inputs.cloudflared_client_secret }}
