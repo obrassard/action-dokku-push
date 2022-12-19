@@ -1,5 +1,5 @@
 # action-dokku-deploy@cloudflared
-Easily deploy an app to your Dokku Instance from GitHub **through Cloudflare Tunnel** !.
+Easily deploy an app to your Dokku Instance from GitHub **through Cloudflare Tunnel** :sparkles:.
 
 For a version without Cloudflare Tunnel support, see the `main` branch.
 
@@ -50,13 +50,17 @@ Optional. The branch to be deployed when pushing to Dokku (default to `master`).
 
 Example : `develop`
 
-### `cloudflared_client_id`
+***
+
+#### `cloudflared_client_id`
 
 **Required**. The clientID of the Service Token created in Cloudflare Zero Trust Dashboard.
 
 Example : `a61c032ee4510f8b7e2749ea0896cc14.access`
 
-### `cloudflared_client_secret`
+***
+
+#### `cloudflared_client_secret`
 
 **Required**. The clientID of the Service Token created in Cloudflare Zero Trust Dashboard.
 
