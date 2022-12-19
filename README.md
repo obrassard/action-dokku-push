@@ -1,6 +1,10 @@
 # action-dokku-deploy
 Easily deploy an app to your Dokku Instance from GitHub
 
+:sparkles: **Now support deployments over Cloudflare Tunnels using Cloudflared**
+
+See [`obrassard/action@cloudflared`](https://github.com/obrassard/action-dokku-push/tree/cloudflared) for more details.
+
 ### Requirements
 
 Please note that this action is compatible with `dokku >= 0.11.6`.
