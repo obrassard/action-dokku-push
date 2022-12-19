@@ -99,7 +99,7 @@ jobs:
       with:
         dokku_repo: 'ssh://dokku@dokku.myhost.ca:22/appname'
         ssh_key: ${{ secrets.SSH_KEY }}
-        deploy_branch: 'develop'
+        deploy_branch: 'master'
         cloudflared_client_id: ${{ secrets.CLOUDFLARED_CLIENT_ID }}
         cloudflared_client_secret: ${{ secrets.CLOUDFLARED_CLIENT_SECRET }}
 ```
